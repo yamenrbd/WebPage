@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+
+//here we add the php code 
+?>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WEB PAGE TEST 1</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link href="style.css" rel="stylesheet">
+        <script src="bootstrap/js/bootstrap.min.js" ></script>
+        <script src="includes/ajax.googleapis.com_ajax_libs_jquery_3.0.0_jquery.min.js"></script>
+        <script>
+        //here we add the Jquery and java script    
+        </script>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>
+                    this is paragraph one
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p>
+                    this is paragraph two
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p>
+                    this is paragraph three
+                </p>
+            </div>
+        </div>
     </body>
 </html>
