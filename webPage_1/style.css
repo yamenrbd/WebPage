@@ -1,3 +1,51 @@
-.base{
-  
+#head1{
+    height: 50px;
+    background-color: #292929;
 }
+#head2{
+    height: 80px;
+    background-color: #3b3b3b;
+}
+
+
+
+.topnav a {
+    
+    height: 80px;
+    float: left;
+    display: block;
+    text-height: max-size;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: groove black 0.5px;
+    
+   
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.bigButton{
+    width: 150px;
+}
+#customer{
+    margin-left: 50px;
+}
+#headLog{
+    color: white;
+    size: 22px;
+    display: block;
+    margin-top: 1%;
+    margin-left: 40px;
+}
+
