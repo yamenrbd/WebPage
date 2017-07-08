@@ -37,8 +37,11 @@
                 </div> 
             </div>
             <div>
-                <p id="label1">Customer List </p>
-                <a class="btn btn-teal btn-sm" href="newCustomer.php" id="label1">new customer</a>
+                <p id="label1">
+                    Customer List <button class="btn btn-teal btn-sm" 
+                    onclick="window.location.href='newCustomer.php'" id="newCustomerButton">new customer
+                    </button></p>
+                
                 
             </div>
        
