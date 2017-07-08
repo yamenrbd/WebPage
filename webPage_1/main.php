@@ -33,28 +33,7 @@
                   
                 </div> 
             </div>
-        <div class="row">
-            <div class="col-lg-4 base">
-                <div class="form-group">
-                    <label for="user">User Name</label>
-                    <input type="text" class="form-control" id="user" />
-                </div>
-                <div class="form-group">
-                    <label for="user">Password</label>
-                    <input type="password" class="form-control" id="pass" />
-                </div>
-            </div>
-            <div class="col-lg-4 base">
-                <p>
-                    this is paragraph two
-                </p>
-            </div>
-            <div class="col-lg-4 base">
-                <p>
-                    this is paragraph three
-                </p>
-            </div>
-        </div>
+       
         </div>
     </body>
 </html>

@@ -1,11 +1,18 @@
 <?php
 
 //here we add the php code
-
-if(isset($_POST['user'],$_POST['pwd'])){
-   //test
-    print_r($_POST);
+if(isset($_POST['user'])&&($_POST['pwd'])){
+    $userName= $_POST['user'];
+    $pass = $_POST['pwd'];
+    $handler = new DPFunction();
+    
+    $status =$handler->logIn("users",$userName,$password);
+    
 }
+
+
+
+
 
 
 
@@ -30,8 +37,7 @@ if(isset($_POST['user'],$_POST['pwd'])){
                
                 $.post("http://localhost/webPage_1/login.php",{user1:user1},function(data){
                      //$('#feedback').html(data);
-                   
-                    
+   
                 });
             
          });
@@ -49,23 +55,20 @@ if(isset($_POST['user'],$_POST['pwd'])){
                 
                 <fieldset>
                     <legend>User login </legend>
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                     <div class="form-group">
-                        <label for="user">User Name:</label>
-                        <input type="text" class="form-control" id="user" name="user">
+                        <label>User Name:</label>
+                        <input type="text" class="form-control"  name="user">
                     </div>
                     <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" name="pwd">
+                    <label>Password:</label>
+                    <input type="password" class="form-control"  name="pwd">
                     </div>
-  
-                        <button type="submit" id="log" value="logIn" name="log" class="btn btn-default" >sign in</button>
+                          <input type="submit"  value="Sign In"  class="btn btn-default" >
                     </form> 
                     </fieldset>
             </div>
-<!--            <div id="feedback">
-                
-            </div>-->
+
             
         
         </div>
