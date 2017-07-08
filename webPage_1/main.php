@@ -19,8 +19,11 @@
     <body>
         <div class="container-fluid">
             <div class="row" id="head1">
-                
+                <div class="row" id="head1">
+                <span id="headLog">German Center Services</span>
             </div>
+            </div>
+            
             <div class="row" id="head2">
                 <div class="topnav" id="myTopnav">
                     <a href="#customer" id="customer" class="bigButton">customer</a>
@@ -32,6 +35,11 @@
                     <a href="#parts" id="parts" class="bigButton">parts</a>
                   
                 </div> 
+            </div>
+            <div>
+                <p id="label1">Customer List </p>
+                <a class="btn btn-teal btn-sm" href="newCustomer.php" id="label1">new customer</a>
+                
             </div>
        
         </div>
