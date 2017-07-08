@@ -1,7 +1,7 @@
-<?php
-require 'connection.php';
+<?php 
+require 'Connection.php';
 
-class DPFunction{
+class dbFunctionClass{
     
     private $link;
     function __construct() {
@@ -18,10 +18,14 @@ class DPFunction{
         $result = $this->link->query($sql);
         $isIn= $result->num_rows;
         if($isIn>=1){
-            return $result->fetch_assoc();    
+            
+            return $result->fetch_assoc(); 
+            
         }
         else {
+           
             return false;
+            
         }
     }
 

@@ -1,18 +1,29 @@
 <?php
-
+session_start();
 //here we add the php code
 if(isset($_POST['user'])&&($_POST['pwd'])){
-    $userName= $_POST['user'];
-    $pass = $_POST['pwd'];
-    $handler = new DPFunction();
+    $userName= trim($_POST['user']);
+    $pass = trim($_POST['pwd']);
+   
+    include_once 'includes/dbFunctionClass.php';
     
-    $status =$handler->logIn("users",$userName,$password);
+     $handler = new dbFunctionClass();
+     $status =$handler->logIn("users",$userName,$pass);
+     if($status){
+                    $_SESSION['admin']=1;
+                    $_SESSION['userName']=$status['user_name'];
+                    $_SESSION['userId']=$status['password'];
+                    $_SESSION['page']='login.php';
+                    header('location:main.php');
+                }else{
+                    //if the user enter the system as admin check if his credentials not correct 
+                    //inform him in a message 
+                    echo "wrong username or password";
+                }
+            }else{
+                echo "please fill out username and password fields";
+            }
     
-}
-
-
-
-
 
 
 
