@@ -3,7 +3,7 @@
 //here we add the php code
 
 if(isset($_POST['user'],$_POST['pwd'])){
-   
+   //test
     print_r($_POST);
 }
 
