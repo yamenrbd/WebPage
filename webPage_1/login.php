@@ -15,6 +15,7 @@ if(isset($_POST['user'])&&($_POST['pwd'])){
                     $_SESSION['userId']=$status['password'];
                     $_SESSION['page']='login.php';
                     header('location:main.php');
+                    
                 }else{
                     //if the user enter the system as admin check if his credentials not correct 
                     //inform him in a message 

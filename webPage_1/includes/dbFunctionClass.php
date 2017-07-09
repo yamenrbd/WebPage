@@ -28,6 +28,19 @@ class dbFunctionClass{
             
         }
     }
+    
+    
+    function numRow($table){
+        $sql= "SELECT * FROM `$table`;";
+        $result = $this->link->query($sql);
+        $numRows= $result->num_rows;
+        return $numRows;
+        
+    }
+    
+
+    
+
 
 
 }

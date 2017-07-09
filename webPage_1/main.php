@@ -1,6 +1,15 @@
 <?php
 
 //here we add the php code 
+
+include_once 'includes/dbFunctionClass.php';
+
+$handler = new dbFunctionClass();
+
+$rowNumber = $handler->numRow('customer');
+
+
+
 ?>
 <html>
     <head>
@@ -44,7 +53,40 @@
                 
                 
             </div>
+            <div>
+                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                    <div class="form-group">
+                <input type="text" id="searchBox1" class="form-control" />
+                <button type="submit" id="searchButton1" class="btn btn-default" >Search</button>
+                </div>
+                </form>
+            
        
         </div>
+            <div>
+                <table class="table">
+    <thead>
+      <tr>
+        <th>customer name</th>
+        <th>Email</th>
+        <th>phone number</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php
+        for($i = 0 ; $i<$rowNumber;$i++){
+            echo '<tr>';
+            echo '<td>John</td>';
+            echo '<td>john@example.com</td>';
+            echo '<td>1234567</td>';
+            echo '</tr>';
+        }
+        ?>
+      
+    </tbody>
+  </table>
+            </div>
+            
+            
     </body>
 </html>
