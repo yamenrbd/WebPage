@@ -1,6 +1,16 @@
 <?php
 
 //here we add the php code 
+
+include_once 'includes/dbFunctionClass.php';
+
+$handler = new dbFunctionClass();
+
+
+$rowNumber = $handler->numRow('customer');
+
+$customer = $handler->customerTable();
+
 ?>
 <html>
     <head>
@@ -19,11 +29,26 @@
     <body>
         <div class="container-fluid">
             <div class="row" id="head1">
-               
-                
+                <div class="row" id="head1">
+                <span id="headLog">German Center Services</span>
+            </div>
             </div>
             
-        
-        </div>
+            <div class="row" id="head2">
+                <div class="topnav" id="myTopnav">
+                    <a href="#customer" id="customer" class="bigButton">customer</a>
+                    <a href="#assest" id="assest" class="bigButton">assess</a>
+                    <a href="#ticket" id="ticket" class="bigButton">ticket</a>
+                    <a href="#estimate" id="estimate" class="bigButton">estimate</a>
+                    <a href="#invoice" id="invoice" class="bigButton">invoice</a>
+                    <a href="#inventry" id="inventry" class="bigButton">inventry</a>
+                    <a href="#parts" id="parts" class="bigButton">parts</a>
+                  
+                </div> 
+            </div>
+            
+     
+            
+            
     </body>
 </html>

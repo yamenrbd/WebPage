@@ -48,7 +48,7 @@ $customer = $handler->customerTable();
             </div>
             <div>
                 <p id="label1">
-                    Customer List <button class="btn btn-teal btn-sm" 
+                    Customer List <button class="btn btn-default btn-sm" 
                     onclick="window.location.href='newCustomer.php'" id="newCustomerButton">new customer
                     </button></p>
                 
