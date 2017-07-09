@@ -6,9 +6,10 @@ include_once 'includes/dbFunctionClass.php';
 
 $handler = new dbFunctionClass();
 
+
 $rowNumber = $handler->numRow('customer');
 
-
+$customer = $handler->customerTable();
 
 ?>
 <html>
@@ -63,8 +64,8 @@ $rowNumber = $handler->numRow('customer');
             
        
         </div>
-            <div>
-                <table class="table">
+            <div >
+                <table class="table" id="cutomer_table">
     <thead>
       <tr>
         <th>customer name</th>
@@ -74,11 +75,11 @@ $rowNumber = $handler->numRow('customer');
     </thead>
     <tbody>
         <?php
-        for($i = 0 ; $i<$rowNumber;$i++){
+       while($row = mysqli_fetch_array($customer, MYSQLI_ASSOC)){
             echo '<tr>';
-            echo '<td>John</td>';
-            echo '<td>john@example.com</td>';
-            echo '<td>1234567</td>';
+            echo '<td>'.$row['customer_name'].'</td>';
+            echo '<td>'.$row['Email'].'</td>';
+            echo '<td>'.$row['phone'].'</td>';
             echo '</tr>';
         }
         ?>

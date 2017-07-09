@@ -38,6 +38,12 @@ class dbFunctionClass{
         
     }
     
+    function customerTable(){
+        $sql= "SELECT * FROM `customer`;";
+        $customer = $this->link->query($sql);
+        return $customer;
+    }
+    
 
     
 
